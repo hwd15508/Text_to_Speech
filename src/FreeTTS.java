@@ -19,9 +19,15 @@ public class FreeTTS {
 	public void speak(String text){
 		voice.speak(text);
 	}
+	public void close(){
+		voice.deallocate();
+	}
+	public void open(){
+		voice.allocate();
+	}
 
 	public static void main(String[] args){
 		FreeTTS tts = new FreeTTS();
-		tts.speak("hi");
+		tts.speak("I love you Vah Ron");
 	}
 }
